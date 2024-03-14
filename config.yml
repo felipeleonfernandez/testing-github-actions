@@ -1,0 +1,7 @@
+pipeline:
+  stages:
+    - download_code
+    - build
+    - test
+    - release
+    - deploy
