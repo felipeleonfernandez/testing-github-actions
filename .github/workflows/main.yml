@@ -35,4 +35,14 @@ jobs:
       - name: Display read-yaml output
         run: echo "${{ steps.yaml-data.outputs.data }}" > pipeline_stages.txt
 
-      - run: ls -l
+      - name: Archive artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: pipeline_stages
+
+      - run: rm pipeline_stages.txt
+
+      - name: Download artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: pipeline_stages
