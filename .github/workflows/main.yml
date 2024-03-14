@@ -33,4 +33,6 @@ jobs:
           key-path: '["pipeline", "stages"]' # Access the runs key then the using key and retuns the value.
 
       - name: Display read-yaml output
-        run: echo "${{ steps.yaml-data.outputs.data }}"
+        run: echo "${{ steps.yaml-data.outputs.data }}" > pipeline_stages.txt
+
+      - run: ls -l
