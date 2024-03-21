@@ -1,3 +1,1 @@
 # testing-github-actions
-
-Test
