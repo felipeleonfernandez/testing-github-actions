@@ -3,5 +3,6 @@ pipeline:
     - download_code
     - build
     - test
+    - check_code_quality
     - release
     - deploy
